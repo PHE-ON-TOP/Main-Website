@@ -9,7 +9,10 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(to bottom, #1a1a1a, #000000);
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            pointer-events: none;
             color: #179fc9;
             font-family: Arial, sans-serif;
             font-size: 17px;
@@ -20,6 +23,12 @@
             line-height: 1.6;
             overflow: hidden;
             user-select: none;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .content {
