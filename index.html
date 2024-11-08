@@ -9,7 +9,7 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(to bottom, #1a1a1a, #000000);
+            background: radial-gradient(circle, #179fc9 -125%, #000000 100%);
             color: #179fc9;
             font-family: Arial, sans-serif;
             font-size: 17px;
@@ -20,6 +20,19 @@
             line-height: 1.6;
             overflow: hidden;
             user-select: none;
+            transition: background 5s ease-in-out;
+        }
+
+        @keyframes backgroundFade {
+            0% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 175%);
+            }
+            50% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 150%);
+            }
+            100% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 125%);
+            }
         }
 
         .content {
@@ -147,7 +160,6 @@
 </head>
 <body>
     <div class="welcome">
-        <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="PHE" style="display: block; margin: 0 auto; width:100%; max-width:175px; margin-top: 10px;">
         <h1>Welcome to PHE Website</h1>
     </div>
     <div class="content">
@@ -164,6 +176,7 @@
             <li><a href="https://phe-website.vercel.app/" onclick="fadeLink(this)" class="orange-link large-link">Map / Social Medias / Staffs</a></li>
         </ul>
     </div>
+    <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="PHE" style="display: block; margin: 0 auto; width:100%; max-width:125px; margin-top: 10px;">
 
     <script>
         document.addEventListener('contextmenu', function(e) {
