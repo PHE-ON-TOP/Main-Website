@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>PHE Store</title>
+    <title>PHE Website</title>
     <style>
         html, body {
             margin: 0;
@@ -83,6 +83,10 @@
             text-decoration: none;
         }
 
+        a:active {
+            color: #585858;
+        }
+
         .orange-link {
             color: rgba(255, 255, 255, 0.8);
         }
@@ -93,35 +97,6 @@
 
         .large-link {
             font-size: 30px;
-        }
-
-        .input-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        input[type="password"] {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #179fc9;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #179fc9;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #117a8b;
         }
 
         .circle {
@@ -140,6 +115,47 @@
                 opacity: 0;
             }
         }
+
+        @media screen and (max-width: 1080px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            p, ul {
+                font-size: 18px;
+            }
+
+            li {
+                margin: 9px 0;
+            }
+
+            .content {
+                max-width: 90%;
+                max-width: 650px;
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p, ul {
+                font-size: 16px;
+            }
+
+            li {
+                margin: 8px 0;
+            }
+
+            .content {
+                max-width: 95%;
+                max-width: 650px;
+                padding: 10px;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,36 +164,32 @@
     </div>
     <div class="content">
         <h1>Roblox Username</h1>
-        <h1>หากเข้าลิ้งค์ไม่ได้ให้แอดชื่อด้านล่างนี้มานะครับ</h1>
         <ul>
-            <li><a href="https://www.roblox.com/users/37404383/profile" onclick="fadeLink(this)" class="orange-link large-link">@butterking18 [ คลิก ]</a></li>
+            <li><a href="https://www.roblox.com/users/37404383/profile" onclick="fadeLink(this)" class="orange-link large-link">@butterking18</a></li>
         </ul>
-
-        <div class="input-container">
-            <input type="password" id="password" placeholder="Enter password">
-            <button onclick="checkPassword()">Submit</button>
-        </div>
+        <h1>Live Countdown !</h1>
+        <ul>
+            <li><a href="https://live-count-phi.vercel.app/" onclick="fadeLink(this)" class="orange-link large-link">Countdown</a></li>
+        </ul>
+        <h1>Social Medias</h1>
+        <ul>
+            <li><a href="https://phe-website.vercel.app/" onclick="fadeLink(this)" class="orange-link large-link">Map / Social Medias / Staffs</a></li>
+        </ul>
     </div>
-    <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="PHE" style="display: block; margin: 0 auto; width: 100%; max-width: 175px;">
-
+    <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="PHE" style="display: block; margin: 0 auto; width:100%; max-width:125px; margin-top: 10px;">
     <script>
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            const correctPassword = "ฝาก +1 ให้ด้วยนะครับ";
-
-            if (password === correctPassword) {
-                window.location.href = "https://www.roblox.com/share?code=dd1d3c61f045a64f820ee9d93969e001&type=Server";
-            } else {
-                alert("Incorrect password. Please try again.");
-            }
-        }
-
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('mousedown', function(e) {
+            if (e.button === 0) {
                 e.preventDefault();
             }
         });
